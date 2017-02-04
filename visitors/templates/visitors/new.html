@@ -1,0 +1,29 @@
+{% extends "visitors/base.html" %}
+
+{% block content %}
+
+<h3>Hello! You are Visitor # <span style="color:red">{{ visitor_number }}</span>! Please register in the following form:</h3>
+
+<form action="{{ action }}" method="POST">
+	{% csrf_token %}
+	<table>
+		<tr>
+			<td>First name:</td><td>{{ form.first_name }}</td>
+			<td>Last name:</td><td>{{ form.last_name }}</td>
+		</tr>
+		<tr>
+			<td>Call sign:</td><td>{{ form.call_sign }}</td>
+			<td>NFARL Member (Y/N)</td><td>{{ form.nfarl_member }}</td>
+		</tr>
+		<tr>
+			<td>Contact me (Y/N)</td><td>{{ form.contact_me }}</td>
+			<td>e-mail:</td><td>{{ form.email }}</td>
+		</tr>
+		<tr>
+			<td>First time here? (Y/N)</td><td>{{ form.first_time }}</td>
+			<td>You age?</td><td>{{ form.age }}</td>
+		</tr>
+	</table>
+	<input type="submit" value="Save" />
+</form>
+{% endblock content %}

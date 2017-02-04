@@ -55,7 +55,7 @@ ROOT_URLCONF = 'field_day.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['field_day/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
