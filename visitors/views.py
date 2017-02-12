@@ -24,3 +24,10 @@ def new(request):
         'form': form_class,
         'visitor_number': visitor_number,
     })
+
+def list(request):
+    all_visitors = Visitor.objects.all()
+
+    return render(request, 'visitors/list.html', {
+        'all_visitors': all_visitors,
+    })
