@@ -22,6 +22,7 @@ class Visitor(models.Model):
     email = models.EmailField()
     first_time = models.BooleanField()
     age = models.PositiveSmallIntegerField(choices=AGE_CHOICES, default=100,)
+#TODO add date and time of registration
 
     def __str__(self):
         return self.last_name
